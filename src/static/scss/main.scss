@@ -1,0 +1,396 @@
+$default_background: #FFF;
+$default_color: #222222;
+$big_fs: 2rem;
+$small_fs: 1rem;
+$box-shadow: 0 6px 26px -2px #E8E8E8FF;
+$border_color: #e8e8e8;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: $default_color;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: $border_color;
+}
+
+/* Default styles */
+body{
+  font-family: "Montserrat", sans-serif;
+  color: $default_color;
+}
+.container{
+  width: 100%;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1250px){
+  .container{
+    padding: 0 2.5%;
+  }
+}
+
+.heading{
+  font-size: $big_fs;
+  font-weight: bold;
+  text-align: center;
+  color: $default_background;
+}
+
+
+/* ==== Books page ==== */
+.main_section{
+}
+
+.actions_place{
+  height: 35%;
+  background: $border_color;
+  padding: 20px 0;
+  box-shadow: 0 6px 5px -5px rgba(97, 61, 2, .3);
+  .container{
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .actions_place{
+    .container{
+      padding: 0 2.5%;
+    }
+  }
+}
+
+.actions_block{
+  margin: 35px 0 25px;
+}
+.search_block{
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: $default_background;
+  padding: 5px 0;
+}
+.filter_sorted_block{
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.action_block{
+  width: 50%;
+}
+@media screen and (max-width: 400px) {
+  .filter_sorted_block{
+    display: block;
+  }
+  .action_block{
+    width: 100%;
+    margin-bottom: 25px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+/* Mui select */
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  background: $default_background;
+}
+/* Mui button Load more */
+.css-sghohy-MuiButtonBase-root-MuiButton-root{
+  display: block!important;
+  margin: 0 auto!important;
+}
+
+.books_section{
+  padding: 30px 25px;
+  height: 65%;
+  .heading{
+    color: #222222;
+  }
+  .heading_loading{
+    height: 4rem;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+
+  }
+}
+.books_place{
+  background: $default_background;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 35px 0;
+}
+.book_item{
+  height: 400px;
+  width: 24%;
+  border-radius: 10px;
+  border: 2px solid $border_color;
+  transition: box-shadow .4s;
+  font-size: 14px;
+  &:hover{
+    transition: box-shadow .4s;
+    box-shadow: $box-shadow;
+  }
+
+  &__img{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 5px -5px rgba(97, 61, 2, .3);
+    img{
+      width: 50%;
+      height: 95%;
+      box-shadow: 2px 2px 10px #6f6f6f;
+    }
+  }
+
+  &__data{
+    padding: 15px 8px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &__category{
+    color: #6f6d6d;
+    display: block;
+  }
+
+  &__title{
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+    padding: 5px 0;
+  }
+
+  &__authors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .book_item{
+    width: 32%;
+  }
+  .book_item__img{
+    img{
+      width: 60%;
+      height: 80%;
+    }
+  }
+}
+@media screen and (max-width: 750px){
+  .book_item{
+    width: 48%;
+    height: 300px;
+  }
+  .book_item__img{
+    img{
+      width: 40%;
+      height: 80%;
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  .book_item{
+    width: 48%;
+    height: 250px;
+    &__data{
+      padding: 8px;
+    }
+  }
+}
+@media screen and (max-width: 350px){
+  .book_item{
+    width: 100%;
+    height: 300px;
+  }
+  .book_item__img{
+    img{
+      width: 40%;
+      height: 90%;
+    }
+  }
+}
+
+/* === Book page === */
+.book_section{
+  padding: 50px 0;
+}
+.book_page{
+  width: 100%;
+  display: flex;
+}
+
+.book_page_item{
+  width: 40%;
+  &:last-child{
+    width: 60%;
+  }
+}
+
+
+.book_page_item__img{
+  width: 100%;
+  height: 450px;
+  background: $border_color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    width: 50%;
+    height: 80%;
+    transition: box-shadow .4s;
+    &:hover{
+      box-shadow: 0 6px 26px -2px #222222;
+      transition: box-shadow .4s;
+    }
+  }
+}
+@media screen and (max-width: 1000px){
+  .book_page_item__img{
+    img{
+      width: 60%;
+    }
+  }
+}
+@media screen and (max-width: 800px){
+  .book_page_item__img{
+    img{
+      width: 80%;
+    }
+  }
+}
+
+
+
+.book_page_item__data{
+  padding: 20px 50px;
+}
+@media screen and (max-width: 600px){
+  .book_page{
+    display: block;
+  }
+  .book_page_item{
+    width: 100%;
+    &:last-child{
+      width: 100%;
+    }
+  }
+  .book_page_item__img{
+    img{
+      width: 60%;
+      box-shadow: 0 6px 26px -2px #222222;
+    }
+  }
+  .book_page_item__data{
+    padding: 25px 0;
+  }
+}
+@media screen and (max-width: 450px){
+  .book_page_item__img{
+    img{
+      width: 70%;
+    }
+  }
+}
+.book_page__title{
+  margin: 45px 0 25px;
+  .heading{
+    color: $default_color;
+    text-align: left;
+  }
+}
+.book_page__description{
+  font-style: italic;
+  line-height: 130%;
+}
+.book_page__authors{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.book_page__author{
+  margin: 0 15px 10px 0;
+  color: #5d5c5c;
+  font-weight: 550;
+}
+
+/* Хлебные крошки */
+.breadcrumbs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.breadcrumbs_link{
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  &:last-child{
+    font-weight: bold;
+    color: #1976d2;
+    &::after{
+      background: #1976d2;
+    }
+  }
+  &::after{
+    display: block;
+    content: "";
+    margin-top: 2px;
+    height: 1px;
+    background: #222222;
+    transform: scale(0);
+    transition: transform .4s;
+  }
+  &:hover::after{
+    transform: scale(1);
+    transition: transform .4s;
+  }
+}
+
+/* Mui arrow */
+.css-i4bv87-MuiSvgIcon-root{
+  width: 0.8em!important;
+  height: 0.8em!important;
+  margin: -2.5px 5px 0!important;
+}
