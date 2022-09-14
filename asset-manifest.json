@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/OtlichnikSasha/GoogleApiCatalog.git/static/css/main.61517433.css",
-    "main.js": "/OtlichnikSasha/GoogleApiCatalog.git/static/js/main.6f573b7e.js",
+    "main.js": "/OtlichnikSasha/GoogleApiCatalog.git/static/js/main.68f633fd.js",
     "index.html": "/OtlichnikSasha/GoogleApiCatalog.git/index.html",
     "main.61517433.css.map": "/OtlichnikSasha/GoogleApiCatalog.git/static/css/main.61517433.css.map",
-    "main.6f573b7e.js.map": "/OtlichnikSasha/GoogleApiCatalog.git/static/js/main.6f573b7e.js.map"
+    "main.68f633fd.js.map": "/OtlichnikSasha/GoogleApiCatalog.git/static/js/main.68f633fd.js.map"
   },
   "entrypoints": [
     "static/css/main.61517433.css",
-    "static/js/main.6f573b7e.js"
+    "static/js/main.68f633fd.js"
   ]
 }
